@@ -30,7 +30,7 @@ from datetime import timedelta, datetime
 # from itertools import izip
 from random import normalvariate, random
 from socketserver import ThreadingMixIn
-
+from stock_processing import getDataPoint, getRatio, main
 import dateutil.parser
 
 ################################################################################
@@ -338,3 +338,5 @@ if __name__ == '__main__':
         print("No data found, generating...")
         generate_csv()
     run(App())
+if __name__ == "__main__":
+    main()

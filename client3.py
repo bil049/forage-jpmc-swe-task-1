@@ -21,7 +21,7 @@
 import json
 import random
 import urllib.request
-
+from stock_processing import getDataPoint, getRatio, main
 # Server API URLs
 QUERY = "http://localhost:8080/query?id={}"
 
@@ -57,3 +57,6 @@ if __name__ == "__main__":
             print("Quoted %s at (bid:%s, ask:%s, price:%s)" % (stock, bid_price, ask_price, price))
 
         print("Ratio %s" % getRatio(price, price))
+
+if __name__ == "__main__":
+    main()

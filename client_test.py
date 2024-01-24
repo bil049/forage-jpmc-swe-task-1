@@ -1,6 +1,6 @@
 import unittest
 from client3 import getDataPoint
-
+from stock_processing import getDataPoint, getRatio, main
 class ClientTest(unittest.TestCase):
   def test_getDataPoint_calculatePrice(self):
     quotes = [
@@ -23,3 +23,5 @@ class ClientTest(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+if __name__ == "__main__":
+    main()
